@@ -1,0 +1,19 @@
+As Task-4 is dedicated to reading , we'll not mention that and focus on Task-5 to solve the challenges.
+
+# What is the number of IP packets?
+Answer : 81420  (just type ip on search toolbar )
+
+# What is the number of packets with a "TTL value less than 10"?
+Answer : 66 (ip.ttl le 10 and also you can write ip.ttl<10)
+
+# What is the number of packets which uses "TCP port 4444"?
+Answer: 632 (tcp.port eq 4444 or tcp.port==444)
+
+# What is the number of "HTTP GET" requests sent to port "80"?
+Answer: 527 
+( http.request.method == "GET" && tcp.port==80 )
+
+# What is the number of "type A DNS Queries"?
+Answer : 51
+
+( dns.qry.type eq 1 && dns.flags.response eq 1 )
