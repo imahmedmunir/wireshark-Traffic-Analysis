@@ -1,0 +1,23 @@
+
+# What is the number of ARP requests crafted by the attacker?
+Answer: 284 
+
+(arp.src.hw_mac == 00:0c:29:e2:18:b4 && arp.opcode == 1)
+
+# What is the number of HTTP packets received by the attacker?
+Answer : 90
+
+( eth.dst == 00:0c:29:e2:18:b4 && http )
+
+# What is the number of sniffed username&password entries?
+Answer : 6
+
+(eth.dst == 00:0c:29:e2:18:b4 && http.request.method == "POST" && urlencoded-form contains "uname"&& http.request.full_uri == "http://testphp.vulnweb.com/userinfo.php")
+
+# What is the password of the "Client986"?
+Answer: clientnothere!
+
+# What is the comment provided by the "Client354"?
+Answer: Nice Work!
+
+(eth.dst == 00:0c:29:e2:18:b4 && http.request.method == "POST" )
