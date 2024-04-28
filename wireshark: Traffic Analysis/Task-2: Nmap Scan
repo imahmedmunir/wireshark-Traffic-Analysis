@@ -1,0 +1,13 @@
+Link : https://tryhackme.com/r/room/wiresharktrafficanalysis
+
+# What is the total number of the "TCP Connect" scans?
+Answer : 100
+
+# Which scan type is used to scan the TCP port 80?
+Answer: tcp connect
+
+# How many "UDP close port" messages are there?
+Answer: 1083
+
+# Which UDP port in the 55-70 port range is open?
+Answer: 68
