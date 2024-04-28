@@ -1,0 +1,28 @@
+Use the "Desktop/exercise-pcaps/dhcp-netbios-kerberos/dhcp-netbios.pcap" file.
+
+# What is the MAC address of the host "Galaxy A30"?
+Answer: 9a:81:41:cb:96:6c
+
+(dhcp.option.hostname matches "Galaxy-A30s")
+
+# How many NetBIOS registration requests does the "LIVALJM" workstation have?
+Answer: 16 
+
+(nbns.flags.opcode == 5 && nbns.name contains "LIVALJM")
+
+# Which host requested the IP address "172.16.13.85"?
+Answer: Galaxy-A12 
+
+(dhcp.option.requested_ip_address == 172.16.13.85)
+
+-->Use the "Desktop/exercise-pcaps/dhcp-netbios-kerberos/kerberos.pcap" file.
+
+# What is the IP address of the user "u5"? (Enter the address in defanged format.)
+Answer : 10[.]1[.]12[.]2 
+
+(kerberos.CNameString contains "u5")
+
+# What is the hostname of the available host in the Kerberos packets?
+Answer : xp1$
+
+(kerberos.CNameString contains "$")
