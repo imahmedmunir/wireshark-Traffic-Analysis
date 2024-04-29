@@ -1,0 +1,15 @@
+Use the "Desktop/exercise-pcaps/dns-icmp/icmp-tunnel.pcap" file.
+
+# Investigate the anomalous packets. Which protocol is used in ICMP tunnelling?
+Answer: SSH 
+
+(data.len > 64 && icmp ) filter packets and look at payload as hinted in exercise.
+
+--> Use the "Desktop/exercise-pcaps/dns-icmp/dns.pcap" file.
+
+# Investigate the anomalous packets. What is the suspicious main domain address that receives anomalous DNS queries? 
+  (Enter the address in defanged format.)
+
+Answer: dataexfil[.]com
+
+( dns.qry.name > 15  and !mdns ) packet 2633 
