@@ -1,0 +1,21 @@
+Use the "Desktop/exercise-pcaps/https/Exercise.pcap" file.
+
+# What is the frame number of the "Client Hello" message sent to "accounts.google.com"?
+Answer: 16
+
+((http.request or tls.handshake.type == 1) and !(ssdp)  OR frame contains "account.google.com")
+
+# Decrypt the traffic with the "KeysLogFile.txt" file. What is the number of HTTP2 packets?
+Answer: 15 
+
+(import sslkeylogfile.txt from vm)
+
+# Go to Frame 322. What is the authority header of the HTTP2 packet? (Enter the address in defanged format.)
+Answer: safebrowsing[.]googleapis[.]com
+
+( Follow the TCP streams)
+
+# Investigate the decrypted packets and find the flag! What is the flag?
+Answer: FLAG{THM-PACKETMASTER}
+
+( go to File>export object )
