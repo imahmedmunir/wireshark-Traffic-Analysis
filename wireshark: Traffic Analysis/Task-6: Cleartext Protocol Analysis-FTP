@@ -1,0 +1,22 @@
+Use the "Desktop/exercise-pcaps/ftp/ftp.pcap" file.
+
+# How many incorrect login attempts are there?
+Answer: 737 
+
+(ftp.response.code == 530)
+
+# What is the size of the file accessed by the "ftp" account?
+Answer: 39424 
+
+( ftp.response.code == 213 ) After that, analyze the streams 
+
+# The adversary uploaded a document to the FTP server. What is the filename?
+Answer: resume.doc
+
+( ftp.response.code == 213 ) After that, analyze the streams 
+
+
+# The adversary tried to assign special flags to change the executing permissions of the uploaded file. What is the command used by the adversary?
+Answer: chmod 77 
+
+( ftp.response.code == 213 ) After that, analyze the streams 
