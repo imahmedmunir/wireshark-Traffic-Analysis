@@ -1,0 +1,24 @@
+Use the "Desktop/exercise-pcaps/http/user-agent.cap" file.
+
+# Investigate the user agents. What is the number of anomalous  "user-agent" types?
+Answer: 6
+(http.user_agent filter and look for hint)
+
+# What is the packet number with a subtle spelling difference in the user agent field?
+Answer: 52 
+
+(packet no: 52, when you carefully look, it's Mozlila not Mozilla)
+
+--> Use the "Desktop/exercise-pcaps/http/http.pcapng" file.
+
+# Locate the "Log4j" attack starting phase. What is the packet number?
+Answer: 444 
+
+(http.request.method == POST ) Look for user agent 
+OR
+(http.user_agent contains "$" || http.user_agent contains "==")
+
+# Locate the "Log4j" attack starting phase and decode the base64 command. 
+  What is the IP address contacted by the adversary? (Enter the address in defanged format and exclude "{}".)
+
+Answer: 62[.]210[.]130[.]250
