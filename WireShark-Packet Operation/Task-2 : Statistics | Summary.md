@@ -1,5 +1,5 @@
 
-On tryhackme : SOC Level 1 > Network Security and Traffic Analysis > Wireshark: Packet Operations
+# On tryhackme : [Packet Operations](https://tryhackme.com/r/room/wiresharkthebasics)
 
 Link: https://tryhackme.com/r/room/wiresharkpacketoperations
 
