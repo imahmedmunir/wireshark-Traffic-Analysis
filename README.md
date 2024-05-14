@@ -1,6 +1,5 @@
 # wireshark-Traffic-Analysis
 you'll find a comprehensive collection of solutions to challenges featured in various TryHackMe rooms. 
-Three rooms solutions are available here.
 
 # wireshark-Basics 
 Learn to capture, filter, and interpret network traffic.
